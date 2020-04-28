@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+
+//function showTime(){
+// 시간:분:초 출력
+	
+//var d = new Date();
+
+//console.log( d.getHours() + ":" + d.getMinutes()+":"+ d.getSeconds())
+//---------------------------------------------------------------------
+
+ setInterval( function (){
+	 var d = new Date(); //현재시간 객체
+ 
+ 	time.innerHTML = d.getHours()
+ 		+ " : " + d.getMinutes() + " : " + d.getSeconds();
+ 		
+ 		time.innerHTML +="<br>"
+ 			+ d.getHours() + "시"
+ 			+ d.getMinutes() + "분"
+ 			+ d.getSeconds() + "초";
+ }, 1000)
+//-----------------------------------------------------
+// 날짜만 출력하는 메소드 - toDateString()
+//console.log(d.toDateString());
+
+// 시간만 출력하는 메소드
+	
+//console.log(d.toTimeString());}
+
+// setInterval( showTime, 1000)
+
+
+//현재 시 분 초를 1초마다 출력
+//console 출력
+
+
+
+</script>
+</head>
+<body>
+
+
+<div id="time"></div>
+
+</body>
+</html>
