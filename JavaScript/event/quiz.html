@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz</title>
+<script type="text/javascript">
+
+// Math.random()이용
+
+// - 곱셈수 앞에는 2~9, 뒤에는 1~9
+
+// - 결과확인 버튼을 누르면 구구단 결과와 비교하고
+// 	 정답, 오답 숫자 증가 시키기
+
+// - 결과확인 누르면 alert()로 결과 알려주기
+
+// - 결과 alert() 닫히면 새로운 랜덤숫자 넣고, 정답입력칸 비우기
+
+// - 정답입력칸 빼고 모두 readonly ="readonly" 설정하기
+
+function setting(){
+	
+	var leftinput = Math.floor(Math.random()*8+1)+1;
+	left.value = leftinput;
+
+	var rightinput = Math.floor(Math.random()*9)+1;
+	right.value = rightinput;
+
+	result.value="";
+
+}
+
+function click(){
+	var leftinput = left.value;
+	var rightinput = right.value;
+	var inputresult = result.value;
+	var temp = leftinput*rightinput;
+	
+	if(temp==inputresult){
+		alert("정답!");
+		collect.value = parseInt(collect.value)+1;
+	}
+	
+	else{
+		alert("오답! 정답은" + temp);
+		wrong.value = parseInt(wrong.value)+1;
+	}	
+	setting();
+}
+
+</script>
+</head>
+<body>
+<h1> 구구단 퀴즈 </h1>
+<hr>
+<input type="text" id="left" readonly="readonly"/>
+x
+<input type="text" id="right"  readonly="readonly"/>
+<br><br>
+<input type="text" id="result" /> 
+<button onclick="click()">결과 확인</button>
+<br><br>
+
+<script type="text/javascript">
+setting();
+</script>
+
+정답수 :<input type= "text" id="collect" readonly="readonly" value="0"/>
+<br>
+오답수 :<input type= "text" id="wrong" readonly="readonly" value="0"/>
+
+
+</body>
+</html>
+
