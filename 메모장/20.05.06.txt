@@ -71,7 +71,7 @@
 + jQuery API
 
 + jQuery Core
-
+ 
   - jQuery 문법이 적용되었음을 알리는 키워드
   
   - jQuery
