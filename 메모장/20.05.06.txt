@@ -84,6 +84,7 @@
                 
                 $("#idname")
                 
+                
    - jQuery Core 키워드는 변수에 저장하여 사용할 수 있다
    
         ex)     var J = jQuery;
